@@ -3,6 +3,8 @@ import styles from './page.module.css'
 
 export default function Home() {
   return (
-    <div className='red'>Next App</div>
+    <div>
+      <h4 className='red'>Next App</h4>
+    </div>
   )
 }
