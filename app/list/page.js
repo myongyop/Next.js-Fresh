@@ -1,21 +1,10 @@
+'use client'
+
+import { useState } from "react"
 
 export default function List() {
   let 상품 = ['Tomatoes', 'Pasta', 'Coconut']
-  let a = [20, 30, 40]
-  let AAAA = [2,3,4]
-  let b = AAAA.map((a, i) => {
-    return 10
-  })
-
-  console.log(b)
-
-  console.log(a[0])
-  console.log(a[1])
-  console.log(a[2])
-
-  a[0] = 100
-
-  console.log(a)
+  let [수량, 수량변경] = useState(0)
 
   return (
     <div>
@@ -26,9 +15,10 @@ export default function List() {
             <div className="food" key={i}>
               <img src={`/food${i}.png`}  className="food-img" />
               <h4>{a} $40</h4>
+              <span> {수량} </span>
+              <button onClick={()=>{ 수량변경(수량+1) }}>+</button>
             </div>
           )
-          
         })
       }
     </div>
